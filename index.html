@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html
+  lang="en"
+  dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- <title>Login Form | CodingLab</title> -->
+    <link
+      rel="stylesheet"
+      href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  </head>
+  <body>
+    <h1>Expense Tracker</h1>
+    <div class="container">
+      <h2>Please login to continue</h2>
+      <div class="wrapper">
+        <div class="title"><span>Login</span></div>
+        <form action="tracker.html">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required />
+          </div>
+
+          <div class="row button">
+            <input
+              type="submit"
+              onclick="redirectToTracker()"
+              value="Login" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    function redirectToTracker() {
+      var name = document.getElementById("name").value;
+      localStorage.setItem("user", name);
+    }
+  </script>
+</html>
